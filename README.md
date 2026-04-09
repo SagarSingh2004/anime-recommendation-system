@@ -1,6 +1,6 @@
 # 🎌 Anime Recommendation System
 
-[![Open Anime Recommendation App](https://img.shields.io/badge/Streamlit-App-green?style=for-the-badge)](YOUR_STREAMLIT_APP_URL_HERE)
+[![Open Anime Recommendation App](https://img.shields.io/badge/Streamlit-App-green?style=for-the-badge)](https://anime-recommendation-system-h8xquwqb3bq3bdkahzuqcn.streamlit.app/)
 
 ---
 
