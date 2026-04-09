@@ -76,11 +76,24 @@ def recommend_content_based(anime_name, top_n=10):
         return pd.DataFrame()
 
     idx = anime_df[anime_df['name'] == anime_name].index[0]
-    sim_scores = list(enumerate(cosine_sim[idx]))
-    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)[1:top_n+1]
-    anime_indices = [i[0] for i in sim_scores]
 
-    return anime_df.iloc[anime_indices][['name','genre','rating']]
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+
+    # Convert to dataframe for easy filtering
+    sim_df = pd.DataFrame(sim_scores, columns=['index', 'score'])
+
+    # Remove the same anime
+    sim_df = sim_df[sim_df['index'] != idx]
+
+    # Get recommendations
+    recommended = anime_df.iloc[sim_df['index']][['name','genre','rating']]
+
+    # Remove duplicate anime names
+    recommended = recommended.drop_duplicates(subset='name')
+
+    # Return top N
+    return recommended.head(top_n)
 
 # --------------------------
 # UI
