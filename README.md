@@ -130,7 +130,7 @@ anime-recommendation-system/
 
 ```bash
 git clone https://github.com/SagarSingh2004/anime-recommendation-system.git
-cd anime-recommendation
+cd anime-recommendation-system
 ```
 
 2. Create a virtual environment and install dependencies:
