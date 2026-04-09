@@ -70,9 +70,8 @@ To design a **recommendation system** that helps anime watchers discover anime:
 
 Interactive **Streamlit app** with three main tabs:
 
-1. **🔥 Hot & Trending:** Shows top-ranked anime by weighted score.  
-2. **🎯 Personal Recommendations:** Users input their **User ID** to get collaborative filtering recommendations.  
-3. **🤝 Similar Anime:** Users select an anime to see **genre-based similar shows**.  
+1. **🔥 Hot & Trending:** Shows top-ranked anime by weighted score.    
+2. **🤝 Similar Anime:** Users select an anime to see **genre-based similar shows**.  
 
 Features:
 - Modern UI with custom CSS  
@@ -108,7 +107,7 @@ Features:
 
 ```
 
-anime_recommendation_system/
+anime-recommendation-system/
 ├── anime.csv
 ├── rating.csv
 ├── dark_theme.css
@@ -130,7 +129,7 @@ anime_recommendation_system/
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/anime-recommendation.git
+git clone https://github.com/SagarSingh2004/anime-recommendation-system.git
 cd anime-recommendation
 ```
 
